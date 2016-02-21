@@ -33,5 +33,5 @@ Whenever `sans-serif`, `serif` or `monospace` are found then they are returned a
 
 ## Links
 
-* Based on Reddit discussion: https://www.reddit.com/r/javascript/comments/46k23v/how_to_get_the_computed_fontfamily/
+* Inspired by: https://www.reddit.com/r/javascript/comments/46k23v/how_to_get_the_computed_fontfamily/
 * Thanks to http://www.lalit.org/lab/javascript-css-font-detect/
