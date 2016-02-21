@@ -1,5 +1,17 @@
 # DetectFont
 
+> Detect which font your system has cherry-picked from font-family.
+
+![Travis](http://img.shields.io/travis/Wildhoney/DetectFont.svg?style=flat-square)
+&nbsp;
+![npm](http://img.shields.io/npm/v/detect-font.svg?style=flat-square)
+&nbsp;
+![License MIT](http://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat-square)
+
+* **npm:** `npm install detect-font --save`
+
+---
+
 ## Usage
 
 ```javascript
