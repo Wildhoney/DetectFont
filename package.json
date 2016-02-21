@@ -1,0 +1,25 @@
+{
+  "name": "detect-font",
+  "version": "0.1.0",
+  "description": "Detect which font your system has cherry-picked from font-family.",
+  "main": "dist/detect-font.js",
+  "scripts": {
+    "test": "ava tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wildhoney/DetectFont.git"
+  },
+  "keywords": [
+    "font",
+    "detect",
+    "font-family",
+    "css"
+  ],
+  "author": "Adam Timberlake <adam.timberlake@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wildhoney/DetectFont/issues"
+  },
+  "homepage": "https://github.com/Wildhoney/DetectFont#readme"
+}
