@@ -51,3 +51,5 @@ Any issues you find, [please raise an issue](https://github.com/Wildhoney/Detect
 
 * Experiment from https://www.reddit.com/r/javascript/comments/46k23v/how_to_get_the_computed_fontfamily/
 * Thanks to https://www.kirupa.com/html5/detect_whether_font_is_installed.htm
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
