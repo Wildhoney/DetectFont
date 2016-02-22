@@ -57,6 +57,11 @@ describe('DetectFont:', () => {
             expect(detectFont(node)).toEqual('monospace');
         });
 
+        it('Should be able to change the font size', () => {
+            node.style.fontFamily = '"Goodness Knows", Arial';
+            expect(detectFont(node, { fontSize: 1 })).toEqual('Arial');
+        });
+
     });
 
     describe('Error Handling:', () => {
@@ -65,10 +70,16 @@ describe('DetectFont:', () => {
             expect(() => detectFont(1)).toThrow(new Error('DetectFont: Cannot detect font on a non-element.'));
         });
 
-        it('Should warn if non-text has been passed into `options`', () => {
+        it('Should raise an exception when font size is set to 0;', () => {
             const node = document.createElement('span');
             node.fontFamily = 'GoodnessKnows, Arial, Tahoma, Helvetica';
-            expect(() => detectFont(node, { text: '' })).toThrow(new Error('DetectFont: Setting text to an empty string will yield false-positives.'));
+            expect(() => detectFont(node, { fontSize: 0 })).toThrow(new Error('DetectFont: Setting font size to zero will always yield false positives.'));
+        });
+
+        it('Should raise an exception if non-text has been passed into `options`', () => {
+            const node = document.createElement('span');
+            node.fontFamily = 'GoodnessKnows, Arial, Tahoma, Helvetica';
+            expect(() => detectFont(node, { text: '' })).toThrow(new Error('DetectFont: Setting text to an empty string will always yield false positives.'));
         });
 
     });

@@ -43,7 +43,7 @@ const element = document.querySelector('...');
 console.log(supportedFonts(element));
 ```
 
-In cases where the font is surrounding in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them.
+In cases where the font is surrounded in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them.
 
 Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
 

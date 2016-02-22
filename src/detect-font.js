@@ -42,7 +42,17 @@ const throwException = message => {
  * @throw {Error}
  */
 const assertText = text => {
-    text === '' && throwException('Setting text to an empty string will yield false-positives');
+    text === '' && throwException('Setting text to an empty string will always yield false positives');
+};
+
+/**
+ * @method assertFontSize
+ * @param {Number} fontSize
+ * @return {void}
+ * @throw {Error}
+ */
+const assertFontSize = fontSize => {
+    fontSize === 0 && throwException('Setting font size to zero will always yield false positives');
 };
 
 /**
@@ -53,8 +63,6 @@ const assertText = text => {
  * @throw {Error}
  */
 export const detectFont = (element, options = DEFAULT_OPTIONS) => {
-
-    assertText(options.text);
 
     if (!isElement(element)) {
         return void throwException('Cannot detect font on a non-element');
@@ -72,13 +80,14 @@ export const detectFont = (element, options = DEFAULT_OPTIONS) => {
  */
 export const supportedFonts = (element, options = DEFAULT_OPTIONS) => {
 
-    assertText(options.text);
-
     if (!isElement(element)) {
         return [];
     }
 
     const opts = { ...DEFAULT_OPTIONS, ...options };
+    assertText(options.text);
+    assertFontSize(options.fontSize);
+
     const properties = global.getComputedStyle(element);
     const fontFamily = properties.getPropertyValue('font-family');
     const fonts = fontFamily.split(',');
