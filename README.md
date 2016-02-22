@@ -26,9 +26,7 @@ console.log(detectFont(element));
 console.log(supportedFonts(element));
 ```
 
-When a typeface is encountered &mdash; `monospace`, `sans-serif` or `serif` &mdash; then it will be returned and the font discovery will not continue.
-
-For example in the following case `monospace` will be returned &mdash; the fonts will not be considered:
+When a typeface is encountered &mdash; `monospace`, `sans-serif` or `serif` &mdash; then it will be returned and the font discovery will not continue. For example in the following case `monospace` will be returned &mdash; the fonts will not be considered:
 
 ```css
 .example {
