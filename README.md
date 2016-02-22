@@ -10,6 +10,8 @@
 
 * **npm:** `npm install detect-font --save`
 
+<img src="media/font.png" align="right" />
+
 ---
 
 ## Usage
@@ -34,5 +36,5 @@ You may also use the `supportedFonts` function to determine which fonts are supp
 
 ## Links
 
-* Inspired by https://www.reddit.com/r/javascript/comments/46k23v/how_to_get_the_computed_fontfamily/
+* Experiment from https://www.reddit.com/r/javascript/comments/46k23v/how_to_get_the_computed_fontfamily/
 * Thanks to https://www.kirupa.com/html5/detect_whether_font_is_installed.htm
