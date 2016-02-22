@@ -4,7 +4,7 @@
   "description": "Detect which font your system has cherry-picked from font-family.",
   "main": "dist/detect-font.js",
   "scripts": {
-    "test": "ava tests/*.test.js"
+    "test": "ava tests/*.test.js --tap | tap-nyan"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,11 @@
     "is-element": "^0.1.0"
   },
   "devDependencies": {
-    "ava": "^0.12.0"
+    "ava": "^0.12.0",
+    "babel-core": "^6.5.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.5.2",
+    "tap-nyan": "0.0.2"
   }
 }
