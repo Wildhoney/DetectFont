@@ -1,4 +1,4 @@
-<img src="media/logo.png" width="170" />
+<img src="media/logo.png" width="235" />
 
 > Detect which font your system has cherry-picked from font-family.
 
@@ -15,10 +15,15 @@
 ## Usage
 
 ```javascript
-import { detectFont } from 'detect-font';
-// ...
+import { detectFont, supportedFonts } from 'detect-font';
+
 const element = document.querySelector('...');
+
+// Yield the first font that is supported on the element.
 console.log(detectFont(element));
+
+// Otherwise display all valid fonts for the element.
+console.log(supportedFonts(element));
 ```
 
 * `detectFont` will yield `false` if the font cannot be determined based on the given `font-family`;
