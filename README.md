@@ -16,22 +16,10 @@
 
 ## Usage
 
-Assuming the following CSS properties are applied to the `.example` node:
-
-```css
-.example {
-    font-family: GoodnessKnows, "Times New Roman", serif;
-}
-```
-
-<sub><sup>Making the assumption that **GoodnessKnows** is not a valid font, and **Times New Roman** is installed on the system &mdash; otherwise it will yield **serif**.</sup></sub>
-
-Then the following will *likely* yield "Times New Roman" as that's the first supported font:
-
 ```javascript
 import { detectFont } from 'detect-font';
 // ...
-const element = document.querySelector('.example');
+const element = document.querySelector('...');
 console.log(detectFont(element));
 ```
 
