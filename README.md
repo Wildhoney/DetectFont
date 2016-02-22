@@ -1,8 +1,8 @@
 # DetectFont
 
-> Detect which font your system has cherry-picked from font-family.
-
 <img src="media/font.png" align="right" width="70" />
+
+> Detect which font your system has cherry-picked from font-family.
 
 ![Travis](http://img.shields.io/travis/Wildhoney/DetectFont.svg?style=flat-square)
 &nbsp;
@@ -32,7 +32,20 @@ console.log(detectFont(element));
 
 Whenever `sans-serif`, `serif` or `monospace` are found then they are returned and no further processing will take place.
 
-You may also use the `supportedFonts` function to determine which fonts are supported for the passed node.
+You may also use the `supportedFonts` function to determine which fonts are supported for the passed node:
+
+```javascript
+import { supportedFonts } from 'detect-font';
+
+// ...
+
+const element = document.querySelector('...');
+console.log(supportedFonts(element));
+```
+
+In cases where the font is surrounding in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them.
+
+Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
 
 ## Links
 
