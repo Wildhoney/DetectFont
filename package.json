@@ -25,5 +25,8 @@
   "dependencies": {
     "get-font-styles": "^1.0.2",
     "is-element": "^0.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.12.0"
   }
 }
