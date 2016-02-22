@@ -60,7 +60,7 @@ export const detectFont = (element, options = DEFAULT_OPTIONS) => {
         return void throwException('Cannot detect font on a non-element');
     }
 
-    return supportedFonts(element, options)[0];
+    return supportedFonts(element, options)[0] || false;
 
 };
 

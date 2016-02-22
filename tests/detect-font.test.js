@@ -39,6 +39,12 @@ describe('DetectFont:', () => {
             expect(detectFont(node)).toEqual('serif');
         });
 
+        it('Should yield browser default when font cannot be recognised;', () => {
+            const node = document.createElement('section');
+            node.style.fontFamily = 'Nothingness, GoodnessKnows, AbsolutelyNothing';
+            expect(detectFont(node)).toEqual(false);
+        });
+
         it('Should return an array of supported fonts;', () => {
             node.style.fontFamily = 'GoodnessKnows, "Times New Roman", Arial, Nothingness, monospace, Tahoma';
             expect(supportedFonts(node)).toEqual(['Times New Roman', 'Arial', 'monospace', 'Tahoma']);
