@@ -25,14 +25,17 @@ const element = document.querySelector('...');
 console.log(detectFont(element));
 ```
 
-`detectFont` will yield `false` if any of the following conditions are `true`:
-
-* Supplied element is `undefined` or not a valid element;
-* Font cannot be determined based on the given `font-family`;
+`detectFont` will yield `false` if the font cannot be determined based on the given `font-family`.
 
 Whenever `sans-serif`, `serif` or `monospace` are found then they are returned and no further processing will take place.
 
-You may also use the `supportedFonts` function to determine which fonts are supported for the passed node:
+In cases where the font is surrounded in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them.
+
+Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
+
+## List
+
+You may use the `supportedFonts` function to determine which fonts are supported for the passed node:
 
 ```javascript
 import { supportedFonts } from 'detect-font';
@@ -42,10 +45,6 @@ import { supportedFonts } from 'detect-font';
 const element = document.querySelector('...');
 console.log(supportedFonts(element));
 ```
-
-In cases where the font is surrounded in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them.
-
-Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
 
 ## Links
 
