@@ -22,7 +22,7 @@ Assuming the following CSS properties are applied to the `.example` node:
 .example {
     font-family: GoodnessKnows, "Times New Roman", serif;
 }
-``
+```
 
 <sub><sup>Making the assumption that **GoodnessKnows** is not a valid font, and **Times New Roman** is installed on the system &mdash; otherwise it will yield **serif**.</sup></sub>
 
