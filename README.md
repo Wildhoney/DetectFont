@@ -26,10 +26,17 @@ console.log(detectFont(element));
 console.log(supportedFonts(element));
 ```
 
-* `detectFont` will yield `false` if the font cannot be determined based on the given `font-family`;
-* Whenever `sans-serif`, `serif` or `monospace` are found then they are returned and no further processing will take place;
-* When font is surrounded in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them;
-* Use the `supportedFonts` function to yield an array of supported fonts for the given node;
+When a typeface is encountered &mdash; `monospace`, `sans-serif` or `serif` &mdash; then it will be returned and the font discovery will not continue.
+
+For example in the following case `monospace` will be returned &mdash; the fonts will not be considered:
+
+```css
+.example {
+    font-family: monospace, "Times New Roman", Arial;
+}
+```
+
+In the unlikely event that a valid font cannot be determined `detectFont` will yield `false` &mdash; an empty array will be returned by `supportedFonts`.
 
 Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
 
