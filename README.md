@@ -1,6 +1,4 @@
-![DetectFont](media/logo.png)
-
-<img src="media/font.png" align="right" width="70" />
+<img src="media/logo.png" width="170" />
 
 > Detect which font your system has cherry-picked from font-family.
 
