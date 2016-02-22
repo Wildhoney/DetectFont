@@ -2,6 +2,8 @@
 
 > Detect which font your system has cherry-picked from font-family.
 
+<img src="media/font.png" align="right" width="70" />
+
 ![Travis](http://img.shields.io/travis/Wildhoney/DetectFont.svg?style=flat-square)
 &nbsp;
 ![npm](http://img.shields.io/npm/v/detect-font.svg?style=flat-square)
@@ -9,8 +11,6 @@
 ![License MIT](http://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat-square)
 
 * **npm:** `npm install detect-font --save`
-
-<img src="media/font.png" align="right" />
 
 ---
 
