@@ -36,7 +36,7 @@ When a typeface is encountered &mdash; `monospace`, `sans-serif` or `serif` &mda
 
 In the unlikely event that a valid font cannot be determined `detectFont` will yield `false` &mdash; an empty array will be returned by `supportedFonts`.
 
-Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
+<img src="media/github.svg" width="15" /> Found a problem? Please [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
 
 ## Links
 
