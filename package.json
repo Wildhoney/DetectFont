@@ -4,6 +4,7 @@
   "description": "Detect which font your system has cherry-picked from font-family.",
   "main": "dist/detect-font.js",
   "scripts": {
+    "build": "webpack",
     "test": "karma start"
   },
   "repository": {
