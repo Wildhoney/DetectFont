@@ -28,7 +28,6 @@ console.log(detectFont(element));
 * In cases where the font is surrounded in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them.
 * Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
 * Use the `supportedFonts` function to yield an array of supported fonts for the given node;
-```
 
 ## Links
 
