@@ -16,34 +16,30 @@
 
 ## Usage
 
+Assuming the following CSS properties are applied to the `.example` node:
+
+```css
+.example {
+    font-family: GoodnessKnows, "Times New Roman", serif;
+}
+``
+
+<sub><sup>Making the assumption that **GoodnessKnows** is not a valid font, and **Times New Roman** is installed on the system &mdash; otherwise it will yield **serif**.</sup></sub>
+
+Then the following will *likely* yield "Times New Roman" as that's the first supported font:
+
 ```javascript
 import { detectFont } from 'detect-font';
-
 // ...
-
-const element = document.querySelector('...');
+const element = document.querySelector('.example');
 console.log(detectFont(element));
 ```
 
-`detectFont` will yield `false` if the font cannot be determined based on the given `font-family`.
-
-Whenever `sans-serif`, `serif` or `monospace` are found then they are returned and no further processing will take place.
-
-In cases where the font is surrounded in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them.
-
-Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
-
-## List
-
-You may use the `supportedFonts` function to determine which fonts are supported for the passed node:
-
-```javascript
-import { supportedFonts } from 'detect-font';
-
-// ...
-
-const element = document.querySelector('...');
-console.log(supportedFonts(element));
+* `detectFont` will yield `false` if the font cannot be determined based on the given `font-family`.
+* Whenever `sans-serif`, `serif` or `monospace` are found then they are returned and no further processing will take place.
+* In cases where the font is surrounded in quotes &mdash; such as "Times New Roman" &mdash; `DetectFont` will attempt to remove them.
+* Any issues you find, [please raise an issue](https://github.com/Wildhoney/DetectFont/issues/new)!
+* Use the `supportedFonts` function to yield an array of supported fonts for the given node;
 ```
 
 ## Links
