@@ -1,4 +1,4 @@
-<img src="media/logo.png" width="235" />
+<img src="media/logo.png" width="295" />
 
 > Detect which font your system has cherry-picked from font-family.
 
