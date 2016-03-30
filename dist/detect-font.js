@@ -52,7 +52,7 @@ module.exports =
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -159,10 +159,10 @@ module.exports =
 	    assertText(options.text);
 	    assertFontSize(options.fontSize);
 
-	    var properties = (global || window).getComputedStyle(element);
+	    var properties = window.getComputedStyle(element);
 	    var fontFamily = properties.getPropertyValue('font-family');
 	    var fonts = fontFamily.split(',');
-	    var canvas = (global || window).document.createElement('canvas');
+	    var canvas = window.document.createElement('canvas');
 	    var context = canvas.getContext('2d');
 
 	    return fonts.map(removeQuotes).map(function (fontName) {
@@ -180,7 +180,6 @@ module.exports =
 	        return value !== false;
 	    });
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 /* 2 */

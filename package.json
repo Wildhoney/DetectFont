@@ -1,6 +1,6 @@
 {
   "name": "detect-font",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Detect which font your system has cherry-picked from font-family.",
   "main": "dist/detect-font.js",
   "scripts": {

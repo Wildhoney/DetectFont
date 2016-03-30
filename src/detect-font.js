@@ -89,10 +89,10 @@ export const supportedFonts = (element, options = DEFAULT_OPTIONS) => {
     assertText(options.text);
     assertFontSize(options.fontSize);
 
-    const properties = (global || window).getComputedStyle(element);
+    const properties = window.getComputedStyle(element);
     const fontFamily = properties.getPropertyValue('font-family');
     const fonts = fontFamily.split(',');
-    const canvas = (global || window).document.createElement('canvas');
+    const canvas = window.document.createElement('canvas');
     const context = canvas.getContext('2d');
 
     return fonts.map(removeQuotes).map(fontName => {
