@@ -109,7 +109,17 @@ module.exports =
 	 * @throw {Error}
 	 */
 	var assertText = function assertText(text) {
-	    text === '' && throwException('Setting text to an empty string will yield false-positives');
+	    text === '' && throwException('Setting text to an empty string will always yield false positives');
+	};
+
+	/**
+	 * @method assertFontSize
+	 * @param {Number} fontSize
+	 * @return {void}
+	 * @throw {Error}
+	 */
+	var assertFontSize = function assertFontSize(fontSize) {
+	    fontSize === 0 && throwException('Setting font size to zero will always yield false positives');
 	};
 
 	/**
@@ -122,8 +132,6 @@ module.exports =
 	var detectFont = exports.detectFont = function detectFont(element) {
 	    var options = arguments.length <= 1 || arguments[1] === undefined ? DEFAULT_OPTIONS : arguments[1];
 
-
-	    assertText(options.text);
 
 	    if (!(0, _isElement2.default)(element)) {
 	        return void throwException('Cannot detect font on a non-element');
@@ -142,17 +150,19 @@ module.exports =
 	    var options = arguments.length <= 1 || arguments[1] === undefined ? DEFAULT_OPTIONS : arguments[1];
 
 
-	    assertText(options.text);
-
 	    if (!(0, _isElement2.default)(element)) {
 	        return [];
 	    }
 
 	    var opts = _extends({}, DEFAULT_OPTIONS, options);
-	    var properties = global.getComputedStyle(element);
+
+	    assertText(options.text);
+	    assertFontSize(options.fontSize);
+
+	    var properties = (global || window).getComputedStyle(element);
 	    var fontFamily = properties.getPropertyValue('font-family');
 	    var fonts = fontFamily.split(',');
-	    var canvas = global.document.createElement('canvas');
+	    var canvas = (global || window).document.createElement('canvas');
 	    var context = canvas.getContext('2d');
 
 	    return fonts.map(removeQuotes).map(function (fontName) {
