@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: __dirname + '/dist',
         filename: '[name].js',
-        library: 'keo',
+        library: 'detectFont',
         libraryTarget: 'commonjs2'
     },
     module: {
