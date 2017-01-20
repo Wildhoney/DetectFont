@@ -12,7 +12,7 @@ module.exports = function(config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Firefox'],
+        browsers: ['Firefox','Chrome'],
         singleRun: true,
         preprocessors: {
             'src/*.js': ['browserify'],
