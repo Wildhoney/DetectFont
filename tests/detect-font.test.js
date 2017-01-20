@@ -50,7 +50,6 @@ describe('DetectFont:', () => {
             expect(supportedFonts(node)).toEqual(['Times New Roman', 'Arial', 'monospace', 'Tahoma']);
         });
 
-
         it('Should return an empty array', () => {
             node.style.fontFamily = '"test fontName"';
             expect(supportedFonts(node)).toEqual([]);

@@ -22,8 +22,8 @@ const BASE_FONTS = ['sans-serif', 'serif', 'monospace'];
  * @return {String}
  */
 export const removeQuotes = name => {
-    let matches = String(name).match(/^["']?(.+?)["']?$/i);
-    return Array.isArray(matches)?matches[1]:'';
+    const matches = String(name).match(/^["']?(.+?)["']?$/i);
+    return Array.isArray(matches) ? matches[1] : '';
 };
 
 /**
@@ -91,12 +91,12 @@ export const supportedFonts = (element, options = DEFAULT_OPTIONS) => {
     assertFontSize(options.fontSize);
 
     const properties = window.getComputedStyle(element);
-    const fontFamily = properties.getPropertyValue('font-family');
+    const fontFamily = properties.getPropertyValue('font-family') || element.style.fontFamily || 'serif';
     const fonts = fontFamily.split(',');
     const canvas = window.document.createElement('canvas');
     const context = canvas.getContext('2d');
 
-    return fonts.map(removeQuotes).map(fontName => {
+    return fonts.map(font => font.trim()).map(removeQuotes).map(fontName => {
 
         if (!!~BASE_FONTS.indexOf(fontName.toLowerCase())) {
             return fontName;
