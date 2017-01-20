@@ -22,7 +22,8 @@ const BASE_FONTS = ['sans-serif', 'serif', 'monospace'];
  * @return {String}
  */
 export const removeQuotes = name => {
-    return String(name).match(/^["']?(.+?)["']?$/i)[1];
+    let matches = String(name).match(/^["']?(.+?)["']?$/i);
+    return Array.isArray(matches)?matches[1]:'';
 };
 
 /**
