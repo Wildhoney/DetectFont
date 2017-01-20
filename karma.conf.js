@@ -1,5 +1,7 @@
 module.exports = function(config) {
 
+    var isTravisCI = 'TRAVIS' in process.env;
+
     config.set({
         basePath: '',
         frameworks: ['jasmine', 'browserify'],
@@ -12,7 +14,7 @@ module.exports = function(config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Firefox','Chrome'],
+        browsers: isTravisCI ? ['Firefox'] : ['Firefox', 'Chrome'],
         singleRun: true,
         preprocessors: {
             'src/*.js': ['browserify'],
