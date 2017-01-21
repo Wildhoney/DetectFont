@@ -4,7 +4,12 @@ describe('DetectFont:', () => {
 
     describe('Font Detection:', () => {
 
-        const node = document.createElement('div');
+        let node;
+
+        beforeEach(() => {
+            node = document.createElement('div');
+            document.body.appendChild(node);
+        });
 
         it('Should yield the first supported font;', () => {
             node.style.fontFamily = 'Arial, Tahoma, Helvetica';
@@ -65,6 +70,28 @@ describe('DetectFont:', () => {
         it('Should be able to change the font size', () => {
             node.style.fontFamily = '"Goodness Knows", Arial';
             expect(detectFont(node, { fontSize: 1 })).toEqual('Arial');
+        });
+
+        it('Should be able to detect the font using computed function;', () => {
+
+            const parent = document.createElement('div');
+            parent.style.fontFamily = 'Arial, Tahoma, Helvetica';
+            parent.appendChild(node);
+            document.body.appendChild(parent);
+
+            expect(detectFont(node)).toEqual('Arial');
+
+        });
+
+        it('Should be able to detect the font using computed function case-insensitively;', () => {
+
+            const parent = document.createElement('div');
+            parent.style.fontFamily = 'GOODNESS KNOWS, TAHOMA, SERIF';
+            parent.appendChild(node);
+            document.body.appendChild(parent);
+
+            expect(detectFont(node)).toEqual('TAHOMA');
+
         });
 
     });
